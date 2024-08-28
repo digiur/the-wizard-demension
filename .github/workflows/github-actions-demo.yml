@@ -31,8 +31,8 @@ jobs:
 
       - name: Set Up Environment
         run: |
-          mkdir -p ~/.local/share/godot/export_templates/4.4-dev1
-          mv templates/* ~/.local/share/godot/export_templates/4.4-dev1
+          mkdir -p ~/.local/share/godot/export_templates/4.4.dev1
+          mv templates/* ~/.local/share/godot/export_templates/4.4.dev1
           mkdir builds
 
       - name: Export Godot Project to HTML
