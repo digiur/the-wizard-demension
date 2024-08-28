@@ -1,18 +1,40 @@
-name: GitHub Actions Demo
-run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
-on: [push]
+name: Publish to itch.io
+run-name: ${{ github.actor }} is publishing a new version! 🚀
+on:
+  push:
+    branches:
+      - 'main'
+defaults:
+  run:
+    shell: bash
 jobs:
-  Explore-GitHub-Actions:
+  Build-and-Publish:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
-      - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
-      - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
-      - name: Check out repository code
+      - name: Check Out Repository
         uses: actions/checkout@v4
-      - run: echo "💡 The ${{ github.repository }} repository has been cloned to the runner."
-      - run: echo "🖥️ The workflow is now ready to test your code on the runner."
-      - name: List files in the repository
+
+      - name: Download Godot Engine & Templates
         run: |
-          ls ${{ github.workspace }}
-      - run: echo "🍏 This job's status is ${{ job.status }}."
+          wget -q https://downloads.tuxfamily.org/godotengine/4.4/dev1/Godot_v4.4-dev1_linux.x86_64.zip
+          wget -q https://downloads.tuxfamily.org/godotengine/4.4/dev1/Godot_v4.4-dev1_export_templates.tpz
+
+      - name: Extract Godot Engine & Templates
+        run: |
+          unzip Godot_v4.4-dev1_linux.x86_64.zip
+          unzip Godot_v4.4-dev1_export_templates.tpz
+
+      - name: Remove Downloaded Zip Packages
+        run: |
+          rm Godot_v4.4-dev1_linux.x86_64.zip
+          rm Godot_v4.4-dev1_export_templates.tpz
+
+      - name: Set Up Environment
+        run: |
+          mkdir -p ~/.local/share/godot/export_templates/4.4-dev1
+          mv templates/* ~/.local/share/godot/export_templates/4.4-dev1
+          mkdir builds
+
+      - name: Export Godot Project to HTML
+        run: |
+          ./Godot_v4.4-dev1_linux.x86_64 --headless --path . --export-release Web builds/html5.html
