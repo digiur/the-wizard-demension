@@ -33,7 +33,7 @@ jobs:
         run: |
           mkdir -p ~/.local/share/godot/export_templates/4.4.dev1
           mv templates/* ~/.local/share/godot/export_templates/4.4.dev1
-          mkdir builds/html5
+          mkdir -p builds/html5
 
       - name: Export Godot Project to HTML
         run: |
