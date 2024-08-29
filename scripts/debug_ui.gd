@@ -27,7 +27,7 @@ func _ready() -> void:
 	WD.process_dir(encounter_directory_path, self.createEncounterPopupMenuItem)
 
 	if WD.encounterNameCurrent != "None":
-		encounters_menu.add_item("End Current Encounter", encounter_scenes.size())
+		levels_menu.add_item("End Current Encounter", encounter_scenes.size())
 
 func createLevelPopupMenuItem(path: String, file_name: String):
 	levels_menu.add_item(file_name, level_scenes.size())
@@ -38,10 +38,10 @@ func createEncounterPopupMenuItem(path: String, file_name: String):
 	encounter_scenes.append(path + file_name)
 
 func _on_levels_menu_id_pressed(i: int) -> void:
-	WD.startLevel(level_scenes[i])
-
-func _on_encounters_menu_id_pressed(i: int) -> void:
 	if i == encounter_scenes.size():
 		WD.endEncounter()
 	else:
-		WD.startEncounter(encounter_scenes[i])
+		WD.startLevel(level_scenes[i])
+
+func _on_encounters_menu_id_pressed(i: int) -> void:
+	WD.startEncounter(encounter_scenes[i])
