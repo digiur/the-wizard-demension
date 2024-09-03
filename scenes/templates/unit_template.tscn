@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://c7ce8h1bbi7li"]
+
+[ext_resource type="Script" path="res://scripts/unit.gd" id="1_kfwru"]
+
+[node name="UnitTemplate" type="Node2D"]
+script = ExtResource("1_kfwru")

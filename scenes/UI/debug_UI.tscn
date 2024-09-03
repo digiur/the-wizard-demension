@@ -109,5 +109,4 @@ theme_override_font_sizes/font_size = 16
 text = "ENCOUNTER NAME"
 
 [connection signal="id_pressed" from="MenuBar/LevelsMenu" to="." method="_on_levels_menu_id_pressed"]
-[connection signal="id_pressed" from="MenuBar/LevelsMenu" to="." method="_on_level_id_pressed"]
 [connection signal="id_pressed" from="MenuBar/EncountersMenu" to="." method="_on_encounters_menu_id_pressed"]
