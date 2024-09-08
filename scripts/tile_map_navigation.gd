@@ -22,5 +22,6 @@ func _ready() -> void:
 func get_nav_path(from: Vector2, to: Vector2) -> PackedVector2Array:
 	return astar.get_point_path(
 		tile_map_layer.local_to_map(from),
-		tile_map_layer.local_to_map(to)
+		tile_map_layer.local_to_map(to),
+		true
 	)
