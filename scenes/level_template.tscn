@@ -1,7 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://cm43ow3i8tjin"]
-
-[ext_resource type="PackedScene" uid="uid://cay2m6mcktqdw" path="res://scenes/UI/debug_UI.tscn" id="1_d00yy"]
-
-[node name="Node2D" type="Node2D"]
-
-[node name="DebugUILayer" parent="." instance=ExtResource("1_d00yy")]

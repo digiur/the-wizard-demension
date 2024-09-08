@@ -1,7 +1,7 @@
 extends CanvasLayer
 
 func _on_start_button_pressed() -> void:
-	WD.startLevel("res://scenes/levels/level_a.tscn")
+	WD.start_level("res://scenes/levels/level_demo.tscn")
 
 func _on_options_button_pressed() -> void:
 	pass

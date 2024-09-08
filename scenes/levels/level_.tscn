@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://cm43ow3i8tjin"]
+
+[ext_resource type="PackedScene" uid="uid://cay2m6mcktqdw" path="res://scenes/ui/ui_debug_menu.tscn" id="1_wnmrr"]
+[ext_resource type="PackedScene" uid="uid://cac373cas334y" path="res://scenes/ui/ui_grid_background.tscn" id="2_lmled"]
+
+[node name="Level" type="Node"]
+
+[node name="DebugUILayer" parent="." instance=ExtResource("1_wnmrr")]
+
+[node name="GridBGLayer" parent="." instance=ExtResource("2_lmled")]

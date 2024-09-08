@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://jtkruruiron4"]
+
+[ext_resource type="PackedScene" uid="uid://cay2m6mcktqdw" path="res://scenes/ui/ui_debug_menu.tscn" id="1_jcy4n"]
+[ext_resource type="PackedScene" uid="uid://cwvghbifggmi6" path="res://scenes/player_.tscn" id="2_1ik7w"]
+[ext_resource type="PackedScene" uid="uid://cac373cas334y" path="res://scenes/ui/ui_grid_background.tscn" id="2_mriqr"]
+
+[node name="Encounter" type="Node"]
+
+[node name="DebugUILayer" parent="." instance=ExtResource("1_jcy4n")]
+
+[node name="GridBGLayer" parent="." instance=ExtResource("2_mriqr")]
+
+[node name="Player" parent="." instance=ExtResource("2_1ik7w")]

@@ -39,9 +39,9 @@ func createEncounterPopupMenuItem(path: String, file_name: String):
 
 func _on_levels_menu_id_pressed(i: int) -> void:
 	if i == encounter_scenes.size():
-		WD.endEncounter()
+		WD.end_encounter()
 	else:
-		WD.startLevel(level_scenes[i])
+		WD.start_level(level_scenes[i])
 
 func _on_encounters_menu_id_pressed(i: int) -> void:
-	WD.startEncounter(encounter_scenes[i])
+	WD.start_encounter(encounter_scenes[i])

@@ -1,0 +1,8 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://bylkh4a6pqf4j"]
+
+[ext_resource type="Shader" path="res://scripts/shaders/selected_aura.gdshader" id="1_3jw7y"]
+
+[resource]
+shader = ExtResource("1_3jw7y")
+shader_parameter/line_color = Color(0, 1, 0, 1)
+shader_parameter/line_thickness = 2.0
