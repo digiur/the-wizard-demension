@@ -1,31 +1,27 @@
-[gd_scene load_steps=4 format=3 uid="uid://cio013lquyru8"]
+[gd_scene load_steps=3 format=3 uid="uid://cio013lquyru8"]
 
 [ext_resource type="PackedScene" uid="uid://jtkruruiron4" path="res://scenes/encounters/encounter_.tscn" id="1_tk0yk"]
 [ext_resource type="PackedScene" uid="uid://dospkyrncv6xs" path="res://scenes/units/unit_.tscn" id="2_v1ri7"]
 
-[sub_resource type="Curve2D" id="Curve2D_dleug"]
-_data = {
-"points": PackedVector2Array(0, 0, 0, 0, 229, 65, 0, 0, 0, 0, 0, 0)
-}
-point_count = 2
-
 [node name="Encounter" instance=ExtResource("1_tk0yk")]
 
 [node name="Unit" parent="." index="5" instance=ExtResource("2_v1ri7")]
-position = Vector2(100, 100)
+position = Vector2(1627, 368)
 
 [node name="Unit2" parent="." index="6" instance=ExtResource("2_v1ri7")]
-position = Vector2(226, 327)
+position = Vector2(235, 709)
 
 [node name="Unit3" parent="." index="7" instance=ExtResource("2_v1ri7")]
-position = Vector2(304, 202)
+position = Vector2(256, 319)
 
 [node name="Unit4" parent="." index="8" instance=ExtResource("2_v1ri7")]
-position = Vector2(480, 216)
+position = Vector2(1755, 818)
 
 [node name="Unit5" parent="." index="9" instance=ExtResource("2_v1ri7")]
 position = Vector2(554, 314)
 
-[node name="Path2D" type="Path2D" parent="." index="10"]
-position = Vector2(1009, 269)
-curve = SubResource("Curve2D_dleug")
+[node name="Unit6" parent="." index="10" instance=ExtResource("2_v1ri7")]
+position = Vector2(1394, 794)
+
+[node name="Unit7" parent="." index="11" instance=ExtResource("2_v1ri7")]
+position = Vector2(1520, 431)

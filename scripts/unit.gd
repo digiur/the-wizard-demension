@@ -39,14 +39,19 @@ func pathfinding_complete() -> void:
 
 func _on_grid_clicked(click_pos: Vector2) -> void:
 	if is_selected:
-		print("%s is heading to %s, from %s" % [name, click_pos, global_position])
+		var nav_path = navigation.get_nav_path(global_position, click_pos)
+
+		if nav_path.size() == 0:
+			print("Grid clicked but not reachable (%s)" % click_pos)
+			return
+
 		path.curve = Curve2D.new()
-		for point in navigation.get_nav_path(global_position, click_pos):
+		for point in nav_path:
 			path.curve.add_point(point)
 		path_follow.progress = 0
 		is_moving = true
 		anim_sprite.play("run")
-
+		print("%s is heading to %s, from %s" % [name, click_pos, global_position])
 		deselect()
 
 func _on_input_area_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
