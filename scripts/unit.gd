@@ -9,7 +9,7 @@ extends Node2D
 
 var is_selected: bool = false
 var is_moving: bool = false
-var default_flip = false
+@export var default_flip = false
 
 func _ready() -> void:
 	WD.grid_click.connect(_on_grid_clicked)
