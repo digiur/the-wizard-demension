@@ -13,6 +13,7 @@ var is_moving: bool = false
 
 func _ready() -> void:
 	WD.grid_click.connect(_on_grid_clicked)
+	anim_sprite.frame = randi_range(0, anim_sprite.sprite_frames.get_frame_count("idle")-1)
 
 func _process(dt: float) -> void:
 	if !is_moving:
@@ -50,7 +51,7 @@ func _on_grid_clicked(click_pos: Vector2) -> void:
 			path.curve.add_point(point)
 		path_follow.progress = 0
 		is_moving = true
-		anim_sprite.play("run")
+		anim_sprite.play("walk")
 		print("%s is heading to %s, from %s" % [name, click_pos, global_position])
 		deselect()
 

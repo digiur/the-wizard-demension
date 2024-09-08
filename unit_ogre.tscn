@@ -1,11 +1,18 @@
-[gd_scene load_steps=58 format=3 uid="uid://cogrwqicx5ldw"]
+[gd_scene load_steps=60 format=3 uid="uid://cogrwqicx5ldw"]
 
 [ext_resource type="PackedScene" uid="uid://dospkyrncv6xs" path="res://scenes/units/unit_.tscn" id="1_rsq4b"]
+[ext_resource type="Shader" path="res://scripts/shaders/selected_aura.gdshader" id="2_g77c5"]
 [ext_resource type="Texture2D" uid="uid://dietuq1i20clu" path="res://assets/units/ogre/ogre_1-atk1.png" id="2_ovsdh"]
 [ext_resource type="Texture2D" uid="uid://fy3xhbfbw36m" path="res://assets/units/ogre/ogre_1-death.png" id="3_5mxiv"]
 [ext_resource type="Texture2D" uid="uid://b0hrt55w2nng7" path="res://assets/units/ogre/ogre_1-hurt.png" id="4_0scfb"]
 [ext_resource type="Texture2D" uid="uid://u6a87qt63juj" path="res://assets/units/ogre/ogre_1-idle.png" id="5_1qfxy"]
 [ext_resource type="Texture2D" uid="uid://bembh42466gxt" path="res://assets/units/ogre/ogre_1-walk.png" id="6_73u1q"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_u42gr"]
+resource_local_to_scene = true
+shader = ExtResource("2_g77c5")
+shader_parameter/line_color = Color(1, 0, 1, 1)
+shader_parameter/line_thickness = 2.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8s7j2"]
 atlas = ExtResource("2_ovsdh")
@@ -260,7 +267,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"attack",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -298,7 +305,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"death",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -324,7 +331,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"hurt",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -353,7 +360,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"idle",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -382,13 +389,14 @@ animations = [{
 }],
 "loop": true,
 "name": &"walk",
-"speed": 5.0
+"speed": 10.0
 }]
 
 [node name="Unit" instance=ExtResource("1_rsq4b")]
 default_flip = true
 
 [node name="AnimatedSprite2D" parent="." index="1"]
+material = SubResource("ShaderMaterial_u42gr")
 sprite_frames = SubResource("SpriteFrames_n6xaa")
-frame_progress = 0.321895
+animation = &"attack"
 flip_h = true

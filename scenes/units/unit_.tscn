@@ -443,7 +443,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_wo3jo")
 }],
 "loop": true,
-"name": &"run",
+"name": &"walk",
 "speed": 10.0
 }]
 
@@ -472,9 +472,8 @@ material = ExtResource("2_r0yyv")
 use_parent_material = true
 position = Vector2(0, -2)
 sprite_frames = SubResource("SpriteFrames_2hfe5")
-animation = &"idle"
+animation = &"walk"
 autoplay = "idle"
-frame_progress = 0.76659
 
 [node name="InputArea" type="Area2D" parent="."]
 collision_mask = 0
