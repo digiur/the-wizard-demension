@@ -4,8 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://b2a10maifodv3" path="res://assets/units/golem/Stone-golem_v2-all_animations-224x192.png" id="1_y8c3s"]
 [ext_resource type="Material" uid="uid://bylkh4a6pqf4j" path="res://resources/selected_highlight_material.tres" id="2_r0yyv"]
 
-[sub_resource type="Curve2D" id="Curve2D_bqu5f"]
-resource_local_to_scene = true
+[sub_resource type="Curve2D" id="Curve2D_txny5"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_io3h1"]
 atlas = ExtResource("1_y8c3s")
@@ -452,17 +451,22 @@ animations = [{
 radius = 30.0
 height = 75.0
 
-[node name="Path2D" type="Path2D"]
-curve = SubResource("Curve2D_bqu5f")
+[node name="Unit" type="Node2D"]
 script = ExtResource("1_f8ycj")
 
-[node name="PathFollow2D" type="PathFollow2D" parent="."]
+[node name="Pathfinding" type="Node" parent="."]
+
+[node name="Path2D" type="Path2D" parent="Pathfinding"]
 unique_name_in_owner = true
-v_offset = -16.0
+curve = SubResource("Curve2D_txny5")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Pathfinding/Path2D"]
+unique_name_in_owner = true
 rotates = false
+cubic_interp = false
 loop = false
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="PathFollow2D"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 unique_name_in_owner = true
 material = ExtResource("2_r0yyv")
 use_parent_material = true
@@ -472,9 +476,12 @@ animation = &"idle"
 autoplay = "idle"
 frame_progress = 0.76659
 
-[node name="Area2D" type="Area2D" parent="PathFollow2D"]
+[node name="InputArea" type="Area2D" parent="."]
+collision_mask = 0
+monitoring = false
+monitorable = false
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="PathFollow2D/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InputArea"]
 shape = SubResource("CapsuleShape2D_l0o4a")
 
-[connection signal="input_event" from="PathFollow2D/Area2D" to="." method="_on_area_2d_input_event"]
+[connection signal="input_event" from="InputArea" to="." method="_on_input_area_input_event"]
