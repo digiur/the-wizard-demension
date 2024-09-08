@@ -5,17 +5,17 @@
 
 [node name="Encounter" instance=ExtResource("1_tk0yk")]
 
-[node name="Unit" parent="." index="3" instance=ExtResource("2_v1ri7")]
-position = Vector2(513, 486)
+[node name="Unit" parent="." index="5" instance=ExtResource("2_v1ri7")]
+position = Vector2(475, 373)
 
-[node name="Unit2" parent="." index="4" instance=ExtResource("2_v1ri7")]
-position = Vector2(302, 394)
+[node name="Unit2" parent="." index="6" instance=ExtResource("2_v1ri7")]
+position = Vector2(226, 327)
 
-[node name="Unit3" parent="." index="5" instance=ExtResource("2_v1ri7")]
-position = Vector2(297, 98)
+[node name="Unit3" parent="." index="7" instance=ExtResource("2_v1ri7")]
+position = Vector2(304, 202)
 
-[node name="Unit4" parent="." index="6" instance=ExtResource("2_v1ri7")]
-position = Vector2(515, 182)
+[node name="Unit4" parent="." index="8" instance=ExtResource("2_v1ri7")]
+position = Vector2(480, 216)
 
-[node name="Unit5" parent="." index="7" instance=ExtResource("2_v1ri7")]
-position = Vector2(655, 308)
+[node name="Unit5" parent="." index="9" instance=ExtResource("2_v1ri7")]
+position = Vector2(554, 314)
