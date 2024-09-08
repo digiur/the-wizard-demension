@@ -6,16 +6,22 @@
 [node name="Encounter" instance=ExtResource("1_tk0yk")]
 
 [node name="Unit" parent="." index="5" instance=ExtResource("2_v1ri7")]
-position = Vector2(475, 373)
+position = Vector2(1627, 368)
 
 [node name="Unit2" parent="." index="6" instance=ExtResource("2_v1ri7")]
-position = Vector2(226, 327)
+position = Vector2(235, 709)
 
 [node name="Unit3" parent="." index="7" instance=ExtResource("2_v1ri7")]
-position = Vector2(304, 202)
+position = Vector2(256, 319)
 
 [node name="Unit4" parent="." index="8" instance=ExtResource("2_v1ri7")]
-position = Vector2(480, 216)
+position = Vector2(1755, 818)
 
 [node name="Unit5" parent="." index="9" instance=ExtResource("2_v1ri7")]
 position = Vector2(554, 314)
+
+[node name="Unit6" parent="." index="10" instance=ExtResource("2_v1ri7")]
+position = Vector2(1394, 794)
+
+[node name="Unit7" parent="." index="11" instance=ExtResource("2_v1ri7")]
+position = Vector2(1520, 431)
