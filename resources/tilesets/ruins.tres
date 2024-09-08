@@ -2,9 +2,9 @@
 
 [ext_resource type="Texture2D" uid="uid://c8684ae6sl34f" path="res://assets/environments/hierachry-grid.png" id="1_re65i"]
 [ext_resource type="Texture2D" uid="uid://cn728bx08qmaf" path="res://assets/environments/ruins/grass-light-transp.png" id="1_uyg2t"]
-[ext_resource type="Texture2D" uid="uid://cbkk4iovn71ht" path="res://assets/environments/ruins/grass-mid tone-transp.png" id="2_orfmn"]
+[ext_resource type="Texture2D" uid="uid://cbkk4iovn71ht" path="res://assets/environments/ruins/grass-mid_tone-transp.png" id="2_orfmn"]
 [ext_resource type="Texture2D" uid="uid://bp4qbflwsamf1" path="res://assets/environments/ruins/grass-dark-transp.png" id="3_uj7ve"]
-[ext_resource type="Texture2D" uid="uid://dx64fd5d5cxfu" path="res://assets/environments/ruins/grass-extra dark-transp.png" id="4_v2x5i"]
+[ext_resource type="Texture2D" uid="uid://dx64fd5d5cxfu" path="res://assets/environments/ruins/grass-extra_dark-transp.png" id="4_v2x5i"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_opu3i"]
 texture = ExtResource("1_re65i")
