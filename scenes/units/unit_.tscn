@@ -1,7 +1,7 @@
 [gd_scene load_steps=65 format=3 uid="uid://dospkyrncv6xs"]
 
 [ext_resource type="Script" path="res://scripts/unit.gd" id="1_f8ycj"]
-[ext_resource type="Texture2D" uid="uid://b2a10maifodv3" path="res://assets/units/golem/Stone-golem v2-all animations-224x192.png" id="1_y8c3s"]
+[ext_resource type="Texture2D" uid="uid://b2a10maifodv3" path="res://assets/units/golem/Stone-golem_v2-all_animations-224x192.png" id="1_y8c3s"]
 [ext_resource type="Material" uid="uid://bylkh4a6pqf4j" path="res://resources/selected_highlight_material.tres" id="2_r0yyv"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_io3h1"]
