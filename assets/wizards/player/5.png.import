@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dgwj16iaf5b7n"
-path="res://.godot/imported/5.png-dfd85cca3be47259dc9bd18966a7a5d4.ctex"
+path="res://.godot/imported/5.png-f2a4f09f5585deffe0ab55deb5bf065d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/wizards/5.png"
-dest_files=["res://.godot/imported/5.png-dfd85cca3be47259dc9bd18966a7a5d4.ctex"]
+source_file="res://assets/wizards/player/5.png"
+dest_files=["res://.godot/imported/5.png-f2a4f09f5585deffe0ab55deb5bf065d.ctex"]
 
 [params]
 

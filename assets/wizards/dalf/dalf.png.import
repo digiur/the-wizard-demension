@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bmfy33ks6q0j1"
-path="res://.godot/imported/8.png-9cb28076ba4351649549c5e0e0ef3f7d.ctex"
+uid="uid://d2f2i4kftx48y"
+path="res://.godot/imported/dalf.png-08d6a035b4547f36e5a9a7782ae3007c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/wizards/8.png"
-dest_files=["res://.godot/imported/8.png-9cb28076ba4351649549c5e0e0ef3f7d.ctex"]
+source_file="res://assets/wizards/dalf/dalf.png"
+dest_files=["res://.godot/imported/dalf.png-08d6a035b4547f36e5a9a7782ae3007c.ctex"]
 
 [params]
 
