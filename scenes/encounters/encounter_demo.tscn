@@ -1,12 +1,15 @@
-[gd_scene load_steps=4 format=3 uid="uid://cio013lquyru8"]
+[gd_scene load_steps=6 format=3 uid="uid://cio013lquyru8"]
 
 [ext_resource type="PackedScene" uid="uid://jtkruruiron4" path="res://scenes/encounters/encounter_.tscn" id="1_tk0yk"]
 [ext_resource type="PackedScene" uid="uid://dospkyrncv6xs" path="res://scenes/units/unit_.tscn" id="2_v1ri7"]
 [ext_resource type="PackedScene" uid="uid://cogrwqicx5ldw" path="res://scenes/units/unit_ogre.tscn" id="3_qvgim"]
+[ext_resource type="Script" path="res://scripts/gnome_establishment.gd" id="4_7vle6"]
+[ext_resource type="Script" path="res://scripts/debug_draw.gd" id="5_clhto"]
 
 [node name="Encounter" instance=ExtResource("1_tk0yk")]
 
-[node name="UnitGroupA" type="Node" parent="." index="5"]
+[node name="UnitGroupA" type="Node2D" parent="." index="5"]
+y_sort_enabled = true
 
 [node name="Unit2" parent="UnitGroupA" index="0" instance=ExtResource("2_v1ri7")]
 position = Vector2(499, 426)
@@ -23,19 +26,42 @@ position = Vector2(137, 247)
 [node name="Unit6" parent="UnitGroupA" index="4" instance=ExtResource("2_v1ri7")]
 position = Vector2(670, 136)
 
-[node name="UnitGroupB" type="Node" parent="." index="6"]
+[node name="UnitGroupB" type="Node2D" parent="." index="6"]
+y_sort_enabled = true
 
 [node name="Unit" parent="UnitGroupB" index="0" instance=ExtResource("3_qvgim")]
+y_sort_enabled = false
 position = Vector2(1655, 873)
 
 [node name="Unit4" parent="UnitGroupB" index="1" instance=ExtResource("3_qvgim")]
+y_sort_enabled = false
 position = Vector2(1758, 856)
 
 [node name="Unit6" parent="UnitGroupB" index="2" instance=ExtResource("3_qvgim")]
+y_sort_enabled = false
 position = Vector2(1466, 828)
 
 [node name="Unit7" parent="UnitGroupB" index="3" instance=ExtResource("3_qvgim")]
+y_sort_enabled = false
 position = Vector2(1593, 756)
 
 [node name="Unit8" parent="UnitGroupB" index="4" instance=ExtResource("3_qvgim")]
+y_sort_enabled = false
 position = Vector2(1347, 873)
+
+[node name="GnomePlace" type="Node2D" parent="." index="7"]
+y_sort_enabled = true
+script = ExtResource("4_7vle6")
+
+[node name="AttackTarget" type="Node2D" parent="GnomePlace" index="0"]
+unique_name_in_owner = true
+position = Vector2(1814, 879)
+
+[node name="Spawn" type="Node2D" parent="GnomePlace" index="1"]
+unique_name_in_owner = true
+position = Vector2(184, 134)
+
+[node name="DebugDraw" type="Node2D" parent="GnomePlace" index="2" node_paths=PackedStringArray("circle_nodes")]
+script = ExtResource("5_clhto")
+circle_nodes = [NodePath("../AttackTarget"), NodePath("../Spawn")]
+palete = [Color(0.501961, 0, 0, 1), Color(0, 0.501961, 0, 1), Color(0.501961, 0, 0.501961, 1)]

@@ -1,0 +1,95 @@
+[gd_scene load_steps=14 format=3 uid="uid://ctpbfg2lsw6gm"]
+
+[ext_resource type="Script" path="res://scenes/units/mob.gd" id="1_vv60s"]
+[ext_resource type="Texture2D" uid="uid://b32nlkea8qijq" path="res://assets/units/gnome/gnome_walk.png" id="2_g102s"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iykgg"]
+atlas = ExtResource("2_g102s")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kp0rg"]
+atlas = ExtResource("2_g102s")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yxcd1"]
+atlas = ExtResource("2_g102s")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kcaw3"]
+atlas = ExtResource("2_g102s")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ogps7"]
+atlas = ExtResource("2_g102s")
+region = Rect2(512, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e6m14"]
+atlas = ExtResource("2_g102s")
+region = Rect2(640, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aai8o"]
+atlas = ExtResource("2_g102s")
+region = Rect2(1152, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dvjk5"]
+atlas = ExtResource("2_g102s")
+region = Rect2(1024, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ejewa"]
+atlas = ExtResource("2_g102s")
+region = Rect2(896, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u63ti"]
+atlas = ExtResource("2_g102s")
+region = Rect2(768, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_t1exv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iykgg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kp0rg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yxcd1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kcaw3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ogps7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e6m14")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aai8o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dvjk5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ejewa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u63ti")
+}],
+"loop": true,
+"name": &"default",
+"speed": 7.0
+}]
+
+[node name="Gnome" type="PathFollow2D"]
+y_sort_enabled = true
+rotates = false
+cubic_interp = false
+loop = false
+script = ExtResource("1_vv60s")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+y_sort_enabled = true
+sprite_frames = SubResource("SpriteFrames_t1exv")
+autoplay = "default"
+frame_progress = 0.636753

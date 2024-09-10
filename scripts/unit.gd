@@ -9,38 +9,24 @@ extends Node2D
 
 var is_selected: bool = false
 var is_moving: bool = false
-@export var default_flip = false
 
 func _ready() -> void:
 	WD.grid_click.connect(_on_grid_clicked)
 	anim_sprite.frame = randi_range(0, anim_sprite.sprite_frames.get_frame_count("idle")-1)
 
 func _process(dt: float) -> void:
-	if !is_moving:
-		anim_sprite.flip_h = default_flip
-	else:
+	if is_moving:
 		path_follow.progress += speed * dt
-		set_flip(global_position, path_follow.position)
 		global_position = path_follow.global_position
 
 		if path_follow.progress_ratio > 0.999:
-			pathfinding_complete()
-
-func set_flip(pos: Vector2, target: Vector2) -> void:
-	var dir = target - pos
-	if is_zero_approx(dir.dot(Vector2.RIGHT)):
-		anim_sprite.flip_h = default_flip
-	else:
-		anim_sprite.flip_h = dir.dot(Vector2.RIGHT) < 0
-
-func pathfinding_complete() -> void:
-	path.curve = Curve2D.new()
-	is_moving = false
-	anim_sprite.play("idle")
+			path.curve = Curve2D.new()
+			is_moving = false
+			anim_sprite.play("idle")
 
 func _on_grid_clicked(click_pos: Vector2) -> void:
 	if is_selected:
-		var nav_path = navigation.get_nav_path(global_position, click_pos)
+		var nav_path: = navigation.get_nav_path_array(global_position, click_pos)
 
 		if nav_path.size() == 0:
 			print("Grid clicked but not reachable (%s)" % click_pos)

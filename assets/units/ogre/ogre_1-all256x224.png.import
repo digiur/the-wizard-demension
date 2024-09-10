@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b32nlkea8qijq"
-path="res://.godot/imported/gnome_walk.png-9328315a4f9c85c4173c40630e9bb575.ctex"
+uid="uid://o8xaybqfcngl"
+path="res://.godot/imported/ogre_1-all256x224.png-46ec069d0378e871e5bb9e6a43db2958.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/units/gnome_walk.png"
-dest_files=["res://.godot/imported/gnome_walk.png-9328315a4f9c85c4173c40630e9bb575.ctex"]
+source_file="res://assets/units/ogre/ogre_1-all256x224.png"
+dest_files=["res://.godot/imported/ogre_1-all256x224.png-46ec069d0378e871e5bb9e6a43db2958.ctex"]
 
 [params]
 
