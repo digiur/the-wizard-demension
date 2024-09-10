@@ -1,0 +1,372 @@
+[gd_scene load_steps=10 format=3 uid="uid://8boi3cnsvayk"]
+
+[ext_resource type="Texture2D" uid="uid://d2f2i4kftx48y" path="res://assets/wizards/dalf/dalf.png" id="1_lawyx"]
+[ext_resource type="Texture2D" uid="uid://c8fcat5bpu4t3" path="res://assets/wizards/mystery.png" id="2_ub7r3"]
+[ext_resource type="Texture2D" uid="uid://cvju4qdakk7h0" path="res://assets/wizards/player/6.png" id="3_glj5p"]
+[ext_resource type="Texture2D" uid="uid://cbinky8h52orp" path="res://assets/icons/chest.png" id="4_nf5dh"]
+[ext_resource type="Script" path="res://scenes/cutscenes/pause_cutscene_button.gd" id="5_xp4u6"]
+[ext_resource type="Texture2D" uid="uid://cqtirnknhrayn" path="res://assets/icons/crystal.png" id="6_qhpys"]
+
+[sub_resource type="Animation" id="Animation_t6ei4"]
+length = 30.0
+step = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(2, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(2, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-417, 626), Vector2(456, 310)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("TextBox/HBoxContainer/VBoxContainer/names/name ???:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(2, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("TextBox/HBoxContainer/VBoxContainer/names/name mandalf:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(2, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("TextBox/HBoxContainer/VBoxContainer/texts/mandalf text a:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(2, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("TextBox/HBoxContainer/VBoxContainer/texts/mandalf text b:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(2, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("TextBox/ColorRect:color")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("TextBox/Button:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(7),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_yqdtt"]
+resource_name = "intro_cutscene"
+length = 30.0
+step = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(2, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(2, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-417, 626), Vector2(608, 419)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("TextBox/HBoxContainer/VBoxContainer/names/name ???:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("TextBox/HBoxContainer/VBoxContainer/names/name mandalf:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("TextBox/HBoxContainer/VBoxContainer/texts/mandalf text a:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("TextBox/HBoxContainer/VBoxContainer/texts/mandalf text b:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("TextBox/ColorRect:color")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ncv75"]
+_data = {
+"RESET": SubResource("Animation_t6ei4"),
+"intro_cutscene": SubResource("Animation_yqdtt")
+}
+
+[node name="Cutscene" type="Node2D"]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_ncv75")
+}
+autoplay = "intro_cutscene"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(-417, 626)
+texture = ExtResource("1_lawyx")
+
+[node name="TextBox" type="CanvasLayer" parent="."]
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TextBox"]
+anchors_preset = -1
+anchor_top = 0.701852
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="mystery portrait" type="TextureRect" parent="TextBox/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("2_ub7r3")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="dalf portrait" type="TextureRect" parent="TextBox/HBoxContainer"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("3_glj5p")
+expand_mode = 1
+stretch_mode = 5
+flip_h = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TextBox/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 6.0
+
+[node name="names" type="MarginContainer" parent="TextBox/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="name ???" type="Label" parent="TextBox/HBoxContainer/VBoxContainer/names"]
+layout_mode = 2
+text = "???:"
+
+[node name="name mandalf" type="Label" parent="TextBox/HBoxContainer/VBoxContainer/names"]
+visible = false
+layout_mode = 2
+text = "Mandalf:"
+
+[node name="texts" type="MarginContainer" parent="TextBox/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="mandalf text a" type="Label" parent="TextBox/HBoxContainer/VBoxContainer/texts"]
+layout_mode = 2
+text = "Hmm, what do we have here?"
+
+[node name="mandalf text b" type="Label" parent="TextBox/HBoxContainer/VBoxContainer/texts"]
+visible = false
+layout_mode = 2
+text = "Another variation it seems. Well,
+whatever Dalf you are, prepare to
+meet your fate!"
+
+[node name="bla" type="Label" parent="TextBox/HBoxContainer/VBoxContainer/texts"]
+visible = false
+layout_mode = 2
+text = "Hmm, what do we have here?"
+
+[node name="bla2" type="Label" parent="TextBox/HBoxContainer/VBoxContainer/texts"]
+visible = false
+layout_mode = 2
+text = "Hmm, what do we have here?"
+
+[node name="bla3" type="Label" parent="TextBox/HBoxContainer/VBoxContainer/texts"]
+visible = false
+layout_mode = 2
+text = "Hmm, what do we have here?"
+
+[node name="bla4" type="Label" parent="TextBox/HBoxContainer/VBoxContainer/texts"]
+visible = false
+layout_mode = 2
+text = "Hmm, what do we have here?"
+
+[node name="bla5" type="Label" parent="TextBox/HBoxContainer/VBoxContainer/texts"]
+visible = false
+layout_mode = 2
+text = "Hmm, what do we have here?"
+
+[node name="bla6" type="Label" parent="TextBox/HBoxContainer/VBoxContainer/texts"]
+visible = false
+layout_mode = 2
+text = "Hmm, what do we have here?"
+
+[node name="bla7" type="Label" parent="TextBox/HBoxContainer/VBoxContainer/texts"]
+visible = false
+layout_mode = 2
+text = "Hmm, what do we have here?"
+
+[node name="bla8" type="Label" parent="TextBox/HBoxContainer/VBoxContainer/texts"]
+visible = false
+layout_mode = 2
+text = "Hmm, what do we have here?"
+
+[node name="bla9" type="Label" parent="TextBox/HBoxContainer/VBoxContainer/texts"]
+visible = false
+layout_mode = 2
+text = "Hmm, what do we have here?"
+
+[node name="bla10" type="Label" parent="TextBox/HBoxContainer/VBoxContainer/texts"]
+visible = false
+layout_mode = 2
+text = "Hmm, what do we have here?"
+
+[node name="bla11" type="Label" parent="TextBox/HBoxContainer/VBoxContainer/texts"]
+visible = false
+layout_mode = 2
+text = "Hmm, what do we have here?"
+
+[node name="bla12" type="Label" parent="TextBox/HBoxContainer/VBoxContainer/texts"]
+visible = false
+layout_mode = 2
+text = "Hmm, what do we have here?"
+
+[node name="bla13" type="Label" parent="TextBox/HBoxContainer/VBoxContainer/texts"]
+visible = false
+layout_mode = 2
+text = "Hmm, what do we have here?"
+
+[node name="bla14" type="Label" parent="TextBox/HBoxContainer/VBoxContainer/texts"]
+visible = false
+layout_mode = 2
+text = "Hmm, what do we have here?"
+
+[node name="ColorRect" type="ColorRect" parent="TextBox"]
+offset_left = -90.0
+offset_top = -103.0
+offset_right = 2045.0
+offset_bottom = 1178.0
+color = Color(0, 0, 0, 1)
+
+[node name="Button" type="Button" parent="TextBox"]
+visible = false
+offset_left = 944.0
+offset_top = 322.0
+offset_right = 1107.0
+offset_bottom = 394.0
+text = "Chest"
+icon = ExtResource("4_nf5dh")
+script = ExtResource("5_xp4u6")
+
+[node name="Button2" type="Button" parent="TextBox"]
+visible = false
+offset_left = 1075.0
+offset_top = 469.0
+offset_right = 1298.0
+offset_bottom = 541.0
+text = "Crystal"
+icon = ExtResource("6_qhpys")
+
+[connection signal="pressed" from="TextBox/Button" to="TextBox/Button" method="_on_pressed"]

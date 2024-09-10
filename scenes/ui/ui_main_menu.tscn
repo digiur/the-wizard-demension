@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://dssqoool2526o"]
 
 [ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_0t00b"]
-[ext_resource type="Texture2D" uid="uid://cvju4qdakk7h0" path="res://assets/wizards/6.png" id="2_mdflj"]
+[ext_resource type="Texture2D" uid="uid://cvju4qdakk7h0" path="res://assets/wizards/player/6.png" id="2_mdflj"]
 [ext_resource type="Texture2D" uid="uid://cqtirnknhrayn" path="res://assets/icons/crystal.png" id="3_20wiy"]
 [ext_resource type="Texture2D" uid="uid://3y5kqwdryoti" path="res://assets/icons/campfire.png" id="4_n0kw1"]
 [ext_resource type="Texture2D" uid="uid://cbinky8h52orp" path="res://assets/icons/chest.png" id="5_0vgkf"]
