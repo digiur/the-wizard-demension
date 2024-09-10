@@ -6,7 +6,8 @@
 [ext_resource type="Script" path="res://scripts/tile_map_navigation.gd" id="4_1sqa8"]
 [ext_resource type="TileSet" uid="uid://b3ykhxf4b11qm" path="res://resources/tilesets/ruins.tres" id="4_8v6eb"]
 
-[node name="Encounter" type="Node"]
+[node name="Encounter" type="Node2D"]
+y_sort_enabled = true
 
 [node name="DebugUILayer" parent="." instance=ExtResource("1_jcy4n")]
 
