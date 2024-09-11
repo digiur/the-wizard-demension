@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://bn7wdw1vounbu"]
+
+[ext_resource type="Script" path="res://scripts/gnome_establishment.gd" id="1_1kdxe"]
+[ext_resource type="Script" path="res://scripts/debug_draw.gd" id="2_wgu3q"]
+
+[node name="GnomePlace" type="Node2D"]
+y_sort_enabled = true
+script = ExtResource("1_1kdxe")
+
+[node name="AttackTarget" type="Node2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(1814, 879)
+
+[node name="Spawn" type="Node2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(184, 134)
+
+[node name="DebugDraw" type="Node2D" parent="." node_paths=PackedStringArray("circle_nodes")]
+script = ExtResource("2_wgu3q")
+circle_nodes = [NodePath("../AttackTarget"), NodePath("../Spawn")]
+palete = [Color(0.501961, 0, 0, 1), Color(0, 0.501961, 0, 1), Color(0.501961, 0, 0.501961, 1)]

@@ -1,4 +1,5 @@
 extends PathFollow2D
+class_name Mob
 
 @export var speed: int = 100
 
