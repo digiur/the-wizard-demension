@@ -1,6 +1,6 @@
 [gd_scene load_steps=14 format=3 uid="uid://ctpbfg2lsw6gm"]
 
-[ext_resource type="Script" path="res://scenes/units/mob.gd" id="1_vv60s"]
+[ext_resource type="Script" path="res://scenes/td/mob.gd" id="1_vv60s"]
 [ext_resource type="Texture2D" uid="uid://b32nlkea8qijq" path="res://assets/units/gnome/gnome_walk.png" id="2_g102s"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_iykgg"]
